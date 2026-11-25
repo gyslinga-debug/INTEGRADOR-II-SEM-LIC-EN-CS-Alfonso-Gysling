@@ -228,6 +228,11 @@ def run_audit(cfg: dict, verbose: bool = True) -> tuple[pd.DataFrame, dict]:
         "exact_duplicates_removed": int((df["duplicate_of"] != "").sum()),
         "exact_duplicate_groups": len(exact_groups),
         "exact_duplicate_label_conflicts": exact_conflicts,
+        "exact_duplicates_by_class": df.loc[df["duplicate_of"] != ""].groupby("label").size()
+                                       .reindex(CLASSES, fill_value=0).to_dict(),
+        "exact_duplicate_group_sizes": dict(sorted(Counter(len(ids) for ids in exact_groups).items())),
+        "exact_duplicate_groups_detail": [df.loc[ids, "rel_path"].tolist() for ids in
+                                          sorted(exact_groups, key=len, reverse=True)],
         "kept_images": int(len(kept)),
         "counts_by_class_kept": counts_kept.to_dict(),
         "class_balance_ratio_max_min": float(counts_kept.max() / max(1, counts_kept.min())),

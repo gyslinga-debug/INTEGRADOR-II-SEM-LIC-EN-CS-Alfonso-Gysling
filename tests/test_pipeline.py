@@ -99,6 +99,8 @@ def test_audit_finds_exact_and_near_duplicates(tmp_path):
     df, report = run_audit(cfg, verbose=False)
     assert report["total_files"] == 18
     assert report["exact_duplicates_removed"] == 1
+    assert report["exact_duplicates_by_class"]["normal"] == 1
+    assert len(report["exact_duplicate_groups_detail"]) == 1
     kept = df[df["duplicate_of"] == ""]
     g = kept.set_index("rel_path")["group_id"]
     normal = FOLDERS["normal"]
@@ -189,3 +191,14 @@ def test_blip_collate_aligns_first_token_with_dec():
     loss = model(pixel_values=batch["pixel_values"], input_ids=batch["input_ids"],
                  attention_mask=batch["attention_mask"], labels=batch["labels"]).loss
     assert np.isfinite(loss.item())
+
+
+def test_lr_per_model_and_warmup_schedule():
+    from ecgvlm.train_classifier import model_lr, warmup_cosine
+
+    c = {"lr": 1e-4, "lr_by_model": {"vit_b16": 2e-5}}
+    assert model_lr(c, "vit_b16") == 2e-5
+    assert model_lr(c, "resnet50") == 1e-4
+    f = warmup_cosine(2, 10)
+    assert [round(f(e), 3) for e in (0, 1, 2)] == [0.5, 1.0, 1.0]
+    assert f(9) < f(5) < f(2)

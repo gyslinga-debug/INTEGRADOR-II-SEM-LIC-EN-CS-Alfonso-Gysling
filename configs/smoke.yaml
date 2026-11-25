@@ -41,6 +41,9 @@ classifier:
   weight_decay: 0.05
   num_workers: 0
   pretrained: false
+  warmup_epochs: 1
+  lr_by_model:
+    vit_tiny: 1.0e-3
 
 blip:
   model_name: tiny               # BLIP reducido construido localmente (sin descargas)
@@ -54,6 +57,7 @@ blip:
   num_beams: 2
   max_new_tokens: 20
   freeze_vision: false
+  balanced_sampling: true
   num_workers: 0
 
 evaluate:

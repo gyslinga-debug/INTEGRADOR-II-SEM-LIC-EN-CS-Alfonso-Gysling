@@ -48,6 +48,23 @@ def predict_probs(model, loader, device) -> np.ndarray:
     return np.concatenate(out) if out else np.zeros((0, len(CLASSES)))
 
 
+def model_lr(c: dict, model_name: str) -> float:
+    """Tasa de aprendizaje del modelo: lr_by_model[modelo] si existe; si no, lr."""
+    return float((c.get("lr_by_model") or {}).get(model_name, c["lr"]))
+
+
+def warmup_cosine(warmup: int, total: int):
+    """Factor por época: subida lineal durante 'warmup' épocas y luego decaimiento coseno."""
+    import math
+
+    def factor(epoch: int) -> float:
+        if warmup > 0 and epoch < warmup:
+            return (epoch + 1) / warmup
+        progress = (epoch - warmup) / max(1, total - warmup)
+        return 0.5 * (1 + math.cos(math.pi * min(1.0, progress)))
+    return factor
+
+
 def train_model(cfg: dict, model_name: str, train_df: pd.DataFrame, val_df: pd.DataFrame,
                 device, pretrained: bool | None = None, verbose: bool = True):
     c = cfg["classifier"]
@@ -58,8 +75,11 @@ def train_model(cfg: dict, model_name: str, train_df: pd.DataFrame, val_df: pd.D
     val_loader = make_loader(val_df, img_size, None, False, c["batch_size"], c["num_workers"])
 
     criterion = nn.CrossEntropyLoss(weight=class_weights(train_df["label_idx"].tolist(), len(CLASSES)).to(device))
-    optimizer = torch.optim.AdamW(model.parameters(), lr=c["lr"], weight_decay=c["weight_decay"])
-    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=max(1, c["epochs"]))
+    lr = model_lr(c, model_name)
+    optimizer = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=c["weight_decay"])
+    scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, warmup_cosine(c.get("warmup_epochs", 0), c["epochs"]))
+    if verbose:
+        print(f"  lr={lr:g}, calentamiento={c.get('warmup_epochs', 0)} épocas, máx. {c['epochs']} épocas")
     scaler = torch.amp.GradScaler("cuda", enabled=device.type == "cuda")
 
     best_f1, best_state, best_epoch, bad, log = -1.0, None, 0, 0, []
@@ -147,7 +167,7 @@ def run_single(cfg, model_name, seed, pretrained=None, skip_existing=False):
     meta = {"run": run, "model": model_name, "seed": seed, "device": str(device),
             "gpu": torch.cuda.get_device_name(0) if torch.cuda.is_available() else None,
             "params": count_params(model), "gflops_per_image": estimate_gflops(model, c["img_size"], device),
-            "img_size": c["img_size"], "best_epoch": best_epoch, "best_val_macro_f1": best_f1,
+            "img_size": c["img_size"], "lr": model_lr(c, model_name), "best_epoch": best_epoch, "best_val_macro_f1": best_f1,
             "epochs_run": int(len(log)), "train_seconds": round(train_secs, 1),
             "mean_epoch_seconds": round(float(log["seconds"].mean()), 2),
             "inference_ms_per_image": round(infer_ms, 2), "config": cfg["_config_path"],

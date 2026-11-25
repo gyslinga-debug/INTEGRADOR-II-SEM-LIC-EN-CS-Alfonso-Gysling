@@ -13,7 +13,8 @@ classes: [normal, mi, abnormal_hb, history_mi]
 audit:
   hash_size: 16                  # dHash de 16 x 16 = 256 bits
   ink_threshold: 110             # gris < umbral se considera tinta del trazado
-  hamming_threshold: 18          # distancia máxima (de 256) para casi-duplicados
+  hamming_threshold: 10          # distancia máxima (de 256) para casi-duplicados; con datos reales
+                                 # los ECG distintos quedan a ~22 bits (mediana), por eso 18 era laxo
   max_group_size: 12             # grupos más grandes se disuelven (salvaguarda)
 
 preprocess:
@@ -33,10 +34,13 @@ augment:
 
 classifier:
   img_size: 224
-  epochs: 30
-  patience: 5
+  epochs: 40
+  patience: 8
   batch_size: 16
-  lr: 1.0e-4
+  lr: 1.0e-4                     # ResNet50
+  lr_by_model:
+    vit_b16: 2.0e-5              # con 1e-4 el ViT colapsaba a la clase mayoritaria
+  warmup_epochs: 2               # calentamiento lineal antes del coseno
   weight_decay: 0.05
   num_workers: 2
   pretrained: true
@@ -44,15 +48,16 @@ classifier:
 blip:
   model_name: Salesforce/blip-image-captioning-base
   img_size: 384
-  epochs: 10
-  patience: 3
+  epochs: 15
+  patience: 5
   batch_size: 8
   lr: 5.0e-5
   weight_decay: 0.05
-  warmup_ratio: 0.05
+  warmup_ratio: 0.1
   num_beams: 3
   max_new_tokens: 40
   freeze_vision: false
+  balanced_sampling: true        # sobremuestrea clases minoritarias (IM tiene solo ~21 imágenes de entrenamiento)
   num_workers: 2
 
 evaluate:

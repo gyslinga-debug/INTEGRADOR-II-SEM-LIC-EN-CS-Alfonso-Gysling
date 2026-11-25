@@ -19,7 +19,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import torch
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, WeightedRandomSampler
 
 from .captions import parse_caption
 from .config import add_common_args, get_device, load_config, load_manifest, save_json, set_seed
@@ -98,10 +98,18 @@ def run_finetune(cfg, seed, freeze_vision=None, skip_existing=False):
     model.to(device)
     bos = model.config.text_config.bos_token_id
     print(f"== {run} en {device} | train={len(train_df)} val={len(val_df)} test={len(test_df)} "
-          f"| visión congelada={freeze_vision}")
+          f"| visión congelada={freeze_vision} | muestreo balanceado={b.get('balanced_sampling', False)}")
 
+    sampler = None
+    if b.get("balanced_sampling", False):
+        # Sobremuestreo: cada clase aporta lo mismo por época (la pérdida de lenguaje no tiene pesos por clase)
+        counts = train_df["label"].value_counts()
+        weights = torch.tensor([1.0 / counts[l] for l in train_df["label"]], dtype=torch.double)
+        sampler = WeightedRandomSampler(weights, num_samples=len(train_df), replacement=True,
+                                        generator=torch.Generator().manual_seed(seed))
     train_loader = DataLoader(BlipDataset(train_df, True, b["img_size"], cfg["augment"]), batch_size=b["batch_size"],
-                              shuffle=True, num_workers=b["num_workers"], collate_fn=blip_collate(processor, bos))
+                              shuffle=sampler is None, sampler=sampler, num_workers=b["num_workers"],
+                              collate_fn=blip_collate(processor, bos))
     val_images = _load_images(val_df, b["img_size"])
     params = [p for p in model.parameters() if p.requires_grad]
     optimizer = torch.optim.AdamW(params, lr=b["lr"], weight_decay=b["weight_decay"])

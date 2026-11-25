@@ -1,0 +1,16 @@
+# torch y torchvision vienen preinstalados en Google Colab; se listan por completitud.
+torch>=2.1
+torchvision>=0.16
+# Transformers v5 cambió la API del tokenizador (ver Entrega 2, R11): se fija la serie 4.x.
+transformers>=4.44,<5.0
+scikit-learn>=1.3
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+pillow>=10.0
+pyyaml>=6.0
+nltk>=3.8
+rouge-score>=0.1.2
+matplotlib>=3.7
+pytest>=7.4
+gradio>=4.0

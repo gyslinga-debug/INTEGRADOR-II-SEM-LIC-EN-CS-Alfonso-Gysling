@@ -1,0 +1,63 @@
+# Configuración por defecto del proyecto ecg-vlm.
+# Las rutas relativas se resuelven desde la raíz del repositorio.
+
+paths:
+  raw_dir: data/raw              # carpeta que contiene las 4 carpetas de Mendeley Data (v2)
+  work_dir: data/processed       # imágenes preprocesadas + manifest.csv
+  results_dir: results           # predicciones, métricas, tablas
+  models_dir: models             # pesos entrenados
+
+seeds: [42, 43, 44]
+classes: [normal, mi, abnormal_hb, history_mi]
+
+audit:
+  hash_size: 16                  # dHash de 16 x 16 = 256 bits
+  ink_threshold: 110             # gris < umbral se considera tinta del trazado
+  hamming_threshold: 18          # distancia máxima (de 256) para casi-duplicados
+  max_group_size: 12             # grupos más grandes se disuelven (salvaguarda)
+
+preprocess:
+  crop_top: 0.10                 # cabecera impresa (texto) que podría servir de atajo
+  crop_bottom: 0.0
+  crop_left: 0.0
+  crop_right: 0.0
+  size: 512                      # letterbox a 512 x 512, relleno blanco
+  split: [0.70, 0.15, 0.15]      # train / val / test
+  split_seed: 42
+
+augment:
+  crop_scale: [0.85, 1.0]
+  rotation: 3                    # grados; sin volteos (ADR-05)
+  brightness: 0.2
+  contrast: 0.2
+
+classifier:
+  img_size: 224
+  epochs: 30
+  patience: 5
+  batch_size: 16
+  lr: 1.0e-4
+  weight_decay: 0.05
+  num_workers: 2
+  pretrained: true
+
+blip:
+  model_name: Salesforce/blip-image-captioning-base
+  img_size: 384
+  epochs: 10
+  patience: 3
+  batch_size: 8
+  lr: 5.0e-5
+  weight_decay: 0.05
+  warmup_ratio: 0.05
+  num_beams: 3
+  max_new_tokens: 40
+  freeze_vision: false
+  num_workers: 2
+
+evaluate:
+  bootstrap: 1000
+  review_per_class: 10           # revisión cualitativa: 10 por clase = 40 salidas
+
+robustness:
+  seed: 0

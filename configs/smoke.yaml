@@ -1,0 +1,64 @@
+# Configuración de la prueba de integración (scripts/smoke_test.sh):
+# datos sintéticos, CPU, modelos pequeños sin pesos preentrenados y pocas épocas.
+# Las métricas que produce NO son resultados del proyecto.
+
+paths:
+  raw_dir: smoke/raw
+  work_dir: smoke/processed
+  results_dir: smoke/results
+  models_dir: smoke/models
+
+seeds: [42]
+classes: [normal, mi, abnormal_hb, history_mi]
+
+audit:
+  hash_size: 16
+  ink_threshold: 110
+  hamming_threshold: 18
+  max_group_size: 12
+
+preprocess:
+  crop_top: 0.10
+  crop_bottom: 0.0
+  crop_left: 0.0
+  crop_right: 0.0
+  size: 128
+  split: [0.70, 0.15, 0.15]
+  split_seed: 42
+
+augment:
+  crop_scale: [0.85, 1.0]
+  rotation: 3
+  brightness: 0.2
+  contrast: 0.2
+
+classifier:
+  img_size: 64
+  epochs: 3
+  patience: 2
+  batch_size: 16
+  lr: 1.0e-3
+  weight_decay: 0.05
+  num_workers: 0
+  pretrained: false
+
+blip:
+  model_name: tiny               # BLIP reducido construido localmente (sin descargas)
+  img_size: 64
+  epochs: 6
+  patience: 6
+  batch_size: 16
+  lr: 1.0e-3
+  weight_decay: 0.0
+  warmup_ratio: 0.0
+  num_beams: 2
+  max_new_tokens: 20
+  freeze_vision: false
+  num_workers: 0
+
+evaluate:
+  bootstrap: 200
+  review_per_class: 2
+
+robustness:
+  seed: 0

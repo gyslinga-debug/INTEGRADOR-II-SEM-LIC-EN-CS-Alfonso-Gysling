@@ -1,0 +1,22 @@
+# Datos: no se versionan (licencia CC BY 4.0, se descargan de Mendeley Data)
+data/
+smoke/
+
+# Modelos entrenados (pesan cientos de MB)
+models/
+*.pt
+*.bin
+*.safetensors
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+build/
+dist/
+
+# Gradio
+flagged/
+.gradio/

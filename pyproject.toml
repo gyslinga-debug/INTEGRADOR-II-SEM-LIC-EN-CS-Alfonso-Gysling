@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ecgvlm"
+version = "1.0.0"
+description = "Predicción y generación de interpretaciones clínicas a partir de imágenes de ECG con modelos de visión-lenguaje"
+authors = [{ name = "Alfonso Gysling" }]
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

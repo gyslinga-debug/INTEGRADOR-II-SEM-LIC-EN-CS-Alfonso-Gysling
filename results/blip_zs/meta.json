@@ -1,0 +1,10 @@
+{
+  "run": "blip_zs",
+  "model_name": "Salesforce/blip-image-captioning-base",
+  "params": {
+    "total": 223971644,
+    "vision": 86090496,
+    "text": 137881148
+  },
+  "device": "cuda"
+}

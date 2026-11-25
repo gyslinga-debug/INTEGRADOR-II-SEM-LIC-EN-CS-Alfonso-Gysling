@@ -1,0 +1,36 @@
+{
+  "run": "vit_b16_s43",
+  "model": "vit_b16",
+  "seed": 43,
+  "device": "cuda",
+  "gpu": "Tesla T4",
+  "params": 85801732,
+  "gflops_per_image": 22.54,
+  "img_size": 224,
+  "best_epoch": 4,
+  "best_val_macro_f1": 0.16055045871559634,
+  "epochs_run": 9,
+  "train_seconds": 56.2,
+  "mean_epoch_seconds": 5.89,
+  "inference_ms_per_image": 17.77,
+  "config": "/content/ecg-vlm/configs/colab.yaml",
+  "hyperparameters": {
+    "img_size": 224,
+    "epochs": 30,
+    "patience": 5,
+    "batch_size": 16,
+    "lr": 0.0001,
+    "weight_decay": 0.05,
+    "num_workers": 2,
+    "pretrained": true
+  },
+  "augment": {
+    "crop_scale": [
+      0.85,
+      1.0
+    ],
+    "rotation": 3,
+    "brightness": 0.2,
+    "contrast": 0.2
+  }
+}

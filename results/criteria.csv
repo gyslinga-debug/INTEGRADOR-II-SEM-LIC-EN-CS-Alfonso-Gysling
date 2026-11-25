@@ -1,0 +1,10 @@
+criterio,umbral,valor,cumple
+Reproducción de la línea base: macro-F1 ViT-B/16,"≥ 0,90",0.16203703703703703,no
+"H1: macro-F1 BLIP-FT ≥ macro-F1 ViT − 0,03","≥ ViT − 0,03",0.3956242212928623,sí
+Recall de IM (BLIP-FT),"≥ 0,90",0.0,no
+H2: texto válido (BLIP-FT),≥ 95 %,1.0,sí
+METEOR de BLIP-FT,"≥ 0,80",0.7958125321071673,no
+Estabilidad: d.e. macro-F1 entre semillas (BLIP-FT),"≤ 0,03",0.21441251748250167,no
+"H3: Δ macro-F1 BLIP-FT en desenfoque, JPEG y rotación 5°",caída ≤ 10 pp,-19.612559352793603,no
+Explicabilidad: mapas Grad-CAM en el trazado,≥ 80 %,,pendiente
+Revisión cualitativa: puntaje medio mínimo entre criterios,"≥ 1,5 / 2",,no

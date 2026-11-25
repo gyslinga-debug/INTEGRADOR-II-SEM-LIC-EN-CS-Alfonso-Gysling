@@ -1,0 +1,36 @@
+{
+  "run": "resnet50_s44",
+  "model": "resnet50",
+  "seed": 44,
+  "device": "cuda",
+  "gpu": "Tesla T4",
+  "params": 23516228,
+  "gflops_per_image": 8.17,
+  "img_size": 224,
+  "best_epoch": 13,
+  "best_val_macro_f1": 0.9011614259198603,
+  "epochs_run": 18,
+  "train_seconds": 95.8,
+  "mean_epoch_seconds": 5.24,
+  "inference_ms_per_image": 16.89,
+  "config": "/content/ecg-vlm/configs/colab.yaml",
+  "hyperparameters": {
+    "img_size": 224,
+    "epochs": 30,
+    "patience": 5,
+    "batch_size": 16,
+    "lr": 0.0001,
+    "weight_decay": 0.05,
+    "num_workers": 2,
+    "pretrained": true
+  },
+  "augment": {
+    "crop_scale": [
+      0.85,
+      1.0
+    ],
+    "rotation": 3,
+    "brightness": 0.2,
+    "contrast": 0.2
+  }
+}

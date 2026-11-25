@@ -1,0 +1,9 @@
+{
+  "n_scored": 0,
+  "mean": {
+    "clase_correcta_0a2": null,
+    "sin_alucinacion_0a2": null,
+    "lenguaje_prudente_0a2": null
+  },
+  "meets_threshold_1_5": false
+}

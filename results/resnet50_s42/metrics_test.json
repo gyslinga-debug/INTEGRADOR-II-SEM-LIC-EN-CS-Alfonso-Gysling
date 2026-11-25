@@ -1,0 +1,87 @@
+{
+  "n": 73,
+  "accuracy": 0.8767123287671232,
+  "macro_f1": 0.8636437908496732,
+  "recall_mi": 1.0,
+  "per_class": {
+    "normal": {
+      "precision": 0.875,
+      "recall": 1.0,
+      "f1": 0.9333333333333333,
+      "support": 21
+    },
+    "mi": {
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8888888888888888,
+      "support": 4
+    },
+    "abnormal_hb": {
+      "precision": 0.9090909090909091,
+      "recall": 0.8571428571428571,
+      "f1": 0.8823529411764706,
+      "support": 35
+    },
+    "history_mi": {
+      "precision": 0.8181818181818182,
+      "recall": 0.6923076923076923,
+      "f1": 0.75,
+      "support": 13
+    }
+  },
+  "confusion_matrix": {
+    "rows_true": [
+      "normal",
+      "mi",
+      "abnormal_hb",
+      "history_mi"
+    ],
+    "cols_pred": [
+      "normal",
+      "mi",
+      "abnormal_hb",
+      "history_mi",
+      "conflict",
+      "unknown"
+    ],
+    "values": [
+      [
+        21,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        1,
+        30,
+        2,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        3,
+        9,
+        0,
+        0
+      ]
+    ]
+  },
+  "macro_f1_ci95": [
+    0.740661732807374,
+    0.943809251440995
+  ],
+  "source": "/content/drive/MyDrive/ecg-vlm-salidas/results/resnet50_s42/pred_test.csv"
+}

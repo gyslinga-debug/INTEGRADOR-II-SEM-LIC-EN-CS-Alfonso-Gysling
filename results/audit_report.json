@@ -1,0 +1,647 @@
+{
+  "raw_dir": "/content/data_raw",
+  "total_files": 928,
+  "counts_by_class_files": {
+    "normal": 284,
+    "mi": 239,
+    "abnormal_hb": 233,
+    "history_mi": 172
+  },
+  "unreadable": [],
+  "exact_duplicates_removed": 437,
+  "exact_duplicate_groups": 258,
+  "exact_duplicate_label_conflicts": [],
+  "kept_images": 491,
+  "counts_by_class_kept": {
+    "normal": 142,
+    "mi": 30,
+    "abnormal_hb": 233,
+    "history_mi": 86
+  },
+  "class_balance_ratio_max_min": 7.766666666666667,
+  "near_duplicates": {
+    "hash_bits": 256,
+    "hamming_threshold": 18,
+    "max_group_size": 12,
+    "pairs_merged_same_class": 18,
+    "groups_total": 473,
+    "groups_with_duplicates": 11,
+    "largest_group": 4,
+    "groups_dissolved_too_large": 2,
+    "nearest_neighbor_distance": {
+      "min": 9,
+      "p05": 15.0,
+      "median": 22.0,
+      "histogram": [
+        0,
+        37,
+        244,
+        137,
+        58,
+        10,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "near_duplicate_label_conflicts": [
+    {
+      "image_a": "img_0011",
+      "label_a": "mi",
+      "image_b": "img_0281",
+      "label_b": "history_mi",
+      "distance": 15
+    },
+    {
+      "image_a": "img_0018",
+      "label_a": "mi",
+      "image_b": "img_0283",
+      "label_b": "history_mi",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0018",
+      "label_a": "mi",
+      "image_b": "img_0648",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0020",
+      "label_a": "mi",
+      "image_b": "img_0692",
+      "label_b": "normal",
+      "distance": 17
+    },
+    {
+      "image_a": "img_0020",
+      "label_a": "mi",
+      "image_b": "img_0765",
+      "label_b": "normal",
+      "distance": 17
+    },
+    {
+      "image_a": "img_0024",
+      "label_a": "mi",
+      "image_b": "img_0634",
+      "label_b": "abnormal_hb",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0026",
+      "label_a": "mi",
+      "image_b": "img_0749",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0031",
+      "label_a": "mi",
+      "image_b": "img_0318",
+      "label_b": "history_mi",
+      "distance": 17
+    },
+    {
+      "image_a": "img_0031",
+      "label_a": "mi",
+      "image_b": "img_0439",
+      "label_b": "abnormal_hb",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0251",
+      "label_a": "history_mi",
+      "image_b": "img_0414",
+      "label_b": "abnormal_hb",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0251",
+      "label_a": "history_mi",
+      "image_b": "img_0612",
+      "label_b": "abnormal_hb",
+      "distance": 16
+    },
+    {
+      "image_a": "img_0251",
+      "label_a": "history_mi",
+      "image_b": "img_0655",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0251",
+      "label_a": "history_mi",
+      "image_b": "img_0687",
+      "label_b": "normal",
+      "distance": 17
+    },
+    {
+      "image_a": "img_0251",
+      "label_a": "history_mi",
+      "image_b": "img_0726",
+      "label_b": "normal",
+      "distance": 16
+    },
+    {
+      "image_a": "img_0251",
+      "label_a": "history_mi",
+      "image_b": "img_0769",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0254",
+      "label_a": "history_mi",
+      "image_b": "img_0542",
+      "label_b": "abnormal_hb",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0256",
+      "label_a": "history_mi",
+      "image_b": "img_0769",
+      "label_b": "normal",
+      "distance": 17
+    },
+    {
+      "image_a": "img_0258",
+      "label_a": "history_mi",
+      "image_b": "img_0671",
+      "label_b": "normal",
+      "distance": 17
+    },
+    {
+      "image_a": "img_0264",
+      "label_a": "history_mi",
+      "image_b": "img_0668",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0264",
+      "label_a": "history_mi",
+      "image_b": "img_0776",
+      "label_b": "normal",
+      "distance": 10
+    },
+    {
+      "image_a": "img_0271",
+      "label_a": "history_mi",
+      "image_b": "img_0670",
+      "label_b": "normal",
+      "distance": 17
+    },
+    {
+      "image_a": "img_0272",
+      "label_a": "history_mi",
+      "image_b": "img_0668",
+      "label_b": "normal",
+      "distance": 16
+    },
+    {
+      "image_a": "img_0272",
+      "label_a": "history_mi",
+      "image_b": "img_0692",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0272",
+      "label_a": "history_mi",
+      "image_b": "img_0760",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0272",
+      "label_a": "history_mi",
+      "image_b": "img_0776",
+      "label_b": "normal",
+      "distance": 14
+    },
+    {
+      "image_a": "img_0274",
+      "label_a": "history_mi",
+      "image_b": "img_0670",
+      "label_b": "normal",
+      "distance": 15
+    },
+    {
+      "image_a": "img_0274",
+      "label_a": "history_mi",
+      "image_b": "img_0758",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0279",
+      "label_a": "history_mi",
+      "image_b": "img_0658",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0280",
+      "label_a": "history_mi",
+      "image_b": "img_0452",
+      "label_b": "abnormal_hb",
+      "distance": 16
+    },
+    {
+      "image_a": "img_0280",
+      "label_a": "history_mi",
+      "image_b": "img_0453",
+      "label_b": "abnormal_hb",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0280",
+      "label_a": "history_mi",
+      "image_b": "img_0652",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0280",
+      "label_a": "history_mi",
+      "image_b": "img_0663",
+      "label_b": "normal",
+      "distance": 16
+    },
+    {
+      "image_a": "img_0280",
+      "label_a": "history_mi",
+      "image_b": "img_0702",
+      "label_b": "normal",
+      "distance": 15
+    },
+    {
+      "image_a": "img_0280",
+      "label_a": "history_mi",
+      "image_b": "img_0777",
+      "label_b": "normal",
+      "distance": 17
+    },
+    {
+      "image_a": "img_0281",
+      "label_a": "history_mi",
+      "image_b": "img_0681",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0283",
+      "label_a": "history_mi",
+      "image_b": "img_0486",
+      "label_b": "abnormal_hb",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0283",
+      "label_a": "history_mi",
+      "image_b": "img_0658",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0289",
+      "label_a": "history_mi",
+      "image_b": "img_0618",
+      "label_b": "abnormal_hb",
+      "distance": 17
+    },
+    {
+      "image_a": "img_0289",
+      "label_a": "history_mi",
+      "image_b": "img_0702",
+      "label_b": "normal",
+      "distance": 16
+    },
+    {
+      "image_a": "img_0289",
+      "label_a": "history_mi",
+      "image_b": "img_0710",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0289",
+      "label_a": "history_mi",
+      "image_b": "img_0788",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0291",
+      "label_a": "history_mi",
+      "image_b": "img_0542",
+      "label_b": "abnormal_hb",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0291",
+      "label_a": "history_mi",
+      "image_b": "img_0752",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0292",
+      "label_a": "history_mi",
+      "image_b": "img_0459",
+      "label_b": "abnormal_hb",
+      "distance": 15
+    },
+    {
+      "image_a": "img_0293",
+      "label_a": "history_mi",
+      "image_b": "img_0452",
+      "label_b": "abnormal_hb",
+      "distance": 15
+    },
+    {
+      "image_a": "img_0293",
+      "label_a": "history_mi",
+      "image_b": "img_0730",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0293",
+      "label_a": "history_mi",
+      "image_b": "img_0769",
+      "label_b": "normal",
+      "distance": 16
+    },
+    {
+      "image_a": "img_0298",
+      "label_a": "history_mi",
+      "image_b": "img_0542",
+      "label_b": "abnormal_hb",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0298",
+      "label_a": "history_mi",
+      "image_b": "img_0777",
+      "label_b": "normal",
+      "distance": 17
+    },
+    {
+      "image_a": "img_0311",
+      "label_a": "history_mi",
+      "image_b": "img_0485",
+      "label_b": "abnormal_hb",
+      "distance": 17
+    },
+    {
+      "image_a": "img_0311",
+      "label_a": "history_mi",
+      "image_b": "img_0580",
+      "label_b": "abnormal_hb",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0311",
+      "label_a": "history_mi",
+      "image_b": "img_0726",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0311",
+      "label_a": "history_mi",
+      "image_b": "img_0773",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0311",
+      "label_a": "history_mi",
+      "image_b": "img_0776",
+      "label_b": "normal",
+      "distance": 16
+    },
+    {
+      "image_a": "img_0311",
+      "label_a": "history_mi",
+      "image_b": "img_0802",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0318",
+      "label_a": "history_mi",
+      "image_b": "img_0428",
+      "label_b": "abnormal_hb",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0318",
+      "label_a": "history_mi",
+      "image_b": "img_0553",
+      "label_b": "abnormal_hb",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0318",
+      "label_a": "history_mi",
+      "image_b": "img_0555",
+      "label_b": "abnormal_hb",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0318",
+      "label_a": "history_mi",
+      "image_b": "img_0667",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0318",
+      "label_a": "history_mi",
+      "image_b": "img_0726",
+      "label_b": "normal",
+      "distance": 16
+    },
+    {
+      "image_a": "img_0318",
+      "label_a": "history_mi",
+      "image_b": "img_0772",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0318",
+      "label_a": "history_mi",
+      "image_b": "img_0777",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0334",
+      "label_a": "history_mi",
+      "image_b": "img_0776",
+      "label_b": "normal",
+      "distance": 16
+    },
+    {
+      "image_a": "img_0389",
+      "label_a": "history_mi",
+      "image_b": "img_0776",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0452",
+      "label_a": "abnormal_hb",
+      "image_b": "img_0647",
+      "label_b": "normal",
+      "distance": 17
+    },
+    {
+      "image_a": "img_0452",
+      "label_a": "abnormal_hb",
+      "image_b": "img_0769",
+      "label_b": "normal",
+      "distance": 13
+    },
+    {
+      "image_a": "img_0452",
+      "label_a": "abnormal_hb",
+      "image_b": "img_0773",
+      "label_b": "normal",
+      "distance": 17
+    },
+    {
+      "image_a": "img_0459",
+      "label_a": "abnormal_hb",
+      "image_b": "img_0701",
+      "label_b": "normal",
+      "distance": 17
+    },
+    {
+      "image_a": "img_0540",
+      "label_a": "abnormal_hb",
+      "image_b": "img_0663",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0540",
+      "label_a": "abnormal_hb",
+      "image_b": "img_0777",
+      "label_b": "normal",
+      "distance": 15
+    },
+    {
+      "image_a": "img_0542",
+      "label_a": "abnormal_hb",
+      "image_b": "img_0773",
+      "label_b": "normal",
+      "distance": 15
+    },
+    {
+      "image_a": "img_0542",
+      "label_a": "abnormal_hb",
+      "image_b": "img_0777",
+      "label_b": "normal",
+      "distance": 17
+    },
+    {
+      "image_a": "img_0553",
+      "label_a": "abnormal_hb",
+      "image_b": "img_0773",
+      "label_b": "normal",
+      "distance": 14
+    },
+    {
+      "image_a": "img_0553",
+      "label_a": "abnormal_hb",
+      "image_b": "img_0777",
+      "label_b": "normal",
+      "distance": 16
+    },
+    {
+      "image_a": "img_0555",
+      "label_a": "abnormal_hb",
+      "image_b": "img_0770",
+      "label_b": "normal",
+      "distance": 17
+    },
+    {
+      "image_a": "img_0558",
+      "label_a": "abnormal_hb",
+      "image_b": "img_0663",
+      "label_b": "normal",
+      "distance": 16
+    },
+    {
+      "image_a": "img_0558",
+      "label_a": "abnormal_hb",
+      "image_b": "img_0694",
+      "label_b": "normal",
+      "distance": 17
+    },
+    {
+      "image_a": "img_0558",
+      "label_a": "abnormal_hb",
+      "image_b": "img_0777",
+      "label_b": "normal",
+      "distance": 17
+    },
+    {
+      "image_a": "img_0609",
+      "label_a": "abnormal_hb",
+      "image_b": "img_0752",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0618",
+      "label_a": "abnormal_hb",
+      "image_b": "img_0698",
+      "label_b": "normal",
+      "distance": 18
+    },
+    {
+      "image_a": "img_0634",
+      "label_a": "abnormal_hb",
+      "image_b": "img_0681",
+      "label_b": "normal",
+      "distance": 18
+    }
+  ],
+  "resolutions": [
+    {
+      "width": 2213,
+      "height": 1572,
+      "n": 928
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "run": "vit_b16_s42",
+  "n_maps": 19,
+  "trace_lift_median": 0.0,
+  "share_lift_above_1": 0.0,
+  "note": "Proxy automático. Complete 'en_trazado_manual' (si/no) para el criterio ≥ 80 %."
+}

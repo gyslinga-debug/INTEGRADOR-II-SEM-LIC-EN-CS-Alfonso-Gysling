@@ -1,0 +1,43 @@
+{
+  "n_images": 491,
+  "by_class_and_split": {
+    "normal": {
+      "train": 100,
+      "val": 21,
+      "test": 21
+    },
+    "mi": {
+      "train": 21,
+      "val": 5,
+      "test": 4
+    },
+    "abnormal_hb": {
+      "train": 163,
+      "val": 35,
+      "test": 35
+    },
+    "history_mi": {
+      "train": 60,
+      "val": 13,
+      "test": 13
+    }
+  },
+  "by_split": {
+    "train": 344,
+    "val": 74,
+    "test": 73
+  },
+  "groups_split_across_partitions": 0,
+  "image_size": 512,
+  "crop": {
+    "crop_top": 0.1,
+    "crop_bottom": 0.0,
+    "crop_left": 0.0,
+    "crop_right": 0.0
+  },
+  "audit": {
+    "total_files": 928,
+    "exact_duplicates_removed": 437,
+    "kept_images": 491
+  }
+}

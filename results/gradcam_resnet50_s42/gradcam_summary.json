@@ -1,0 +1,7 @@
+{
+  "run": "resnet50_s42",
+  "n_maps": 19,
+  "trace_lift_median": 2.052,
+  "share_lift_above_1": 1.0,
+  "note": "Proxy automático. Complete 'en_trazado_manual' (si/no) para el criterio ≥ 80 %."
+}

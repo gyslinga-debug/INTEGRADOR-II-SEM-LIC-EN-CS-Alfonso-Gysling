@@ -1,0 +1,49 @@
+{
+  "model": "vit_b16",
+  "k": 5,
+  "seed": 42,
+  "folds": [
+    {
+      "fold": 1,
+      "n_train": 336,
+      "n_val": 82,
+      "macro_f1": 0.16393442622950818,
+      "accuracy": 0.4878048780487805,
+      "best_epoch": 1
+    },
+    {
+      "fold": 2,
+      "n_train": 332,
+      "n_val": 86,
+      "macro_f1": 0.1532258064516129,
+      "accuracy": 0.4418604651162791,
+      "best_epoch": 2
+    },
+    {
+      "fold": 3,
+      "n_train": 335,
+      "n_val": 83,
+      "macro_f1": 0.16532258064516128,
+      "accuracy": 0.4939759036144578,
+      "best_epoch": 4
+    },
+    {
+      "fold": 4,
+      "n_train": 334,
+      "n_val": 84,
+      "macro_f1": 0.16129032258064516,
+      "accuracy": 0.47619047619047616,
+      "best_epoch": 1
+    },
+    {
+      "fold": 5,
+      "n_train": 335,
+      "n_val": 83,
+      "macro_f1": 0.1598360655737705,
+      "accuracy": 0.46987951807228917,
+      "best_epoch": 4
+    }
+  ],
+  "macro_f1_mean": 0.16072184029613962,
+  "macro_f1_std": 0.004711311189660162
+}

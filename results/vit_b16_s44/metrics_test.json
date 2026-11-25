@@ -1,0 +1,87 @@
+{
+  "n": 73,
+  "accuracy": 0.4794520547945205,
+  "macro_f1": 0.16203703703703703,
+  "recall_mi": 0.0,
+  "per_class": {
+    "normal": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 21
+    },
+    "mi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "abnormal_hb": {
+      "precision": 0.4794520547945205,
+      "recall": 1.0,
+      "f1": 0.6481481481481481,
+      "support": 35
+    },
+    "history_mi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 13
+    }
+  },
+  "confusion_matrix": {
+    "rows_true": [
+      "normal",
+      "mi",
+      "abnormal_hb",
+      "history_mi"
+    ],
+    "cols_pred": [
+      "normal",
+      "mi",
+      "abnormal_hb",
+      "history_mi",
+      "conflict",
+      "unknown"
+    ],
+    "values": [
+      [
+        0,
+        0,
+        21,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        35,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        13,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "macro_f1_ci95": [
+    0.135,
+    0.18803418803418803
+  ],
+  "source": "/content/drive/MyDrive/ecg-vlm-salidas/results/vit_b16_s44/pred_test.csv"
+}

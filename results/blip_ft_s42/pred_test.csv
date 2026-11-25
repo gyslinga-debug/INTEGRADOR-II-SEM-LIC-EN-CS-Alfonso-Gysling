@@ -1,0 +1,74 @@
+image_id,label,pred,text
+img_0010,mi,normal,normal ecg with regular sinus rhythm.
+img_0019,mi,normal,normal ecg with regular sinus rhythm.
+img_0030,mi,history_mi,ecg showing evidence of prior myocardial infarction.
+img_0033,mi,abnormal_hb,this electrocardiogram shows an irregular heart rhythm.
+img_0241,history_mi,normal,normal ecg with regular sinus rhythm.
+img_0260,history_mi,abnormal_hb,ecg showing an abnormal heartbeat.
+img_0264,history_mi,normal,normal ecg with regular sinus rhythm.
+img_0267,history_mi,normal,normal ecg with regular sinus rhythm.
+img_0276,history_mi,history_mi,ecg showing evidence of prior myocardial infarction.
+img_0277,history_mi,normal,normal ecg with regular sinus rhythm.
+img_0287,history_mi,normal,normal ecg with regular sinus rhythm.
+img_0294,history_mi,history_mi,ecg showing evidence of prior myocardial infarction.
+img_0297,history_mi,normal,normal ecg with regular sinus rhythm.
+img_0301,history_mi,normal,normal ecg with regular sinus rhythm.
+img_0302,history_mi,normal,normal ecg with regular sinus rhythm.
+img_0303,history_mi,abnormal_hb,this electrocardiogram shows an irregular heart rhythm.
+img_0367,history_mi,history_mi,ecg showing evidence of prior myocardial infarction.
+img_0412,abnormal_hb,history_mi,ecg showing evidence of prior myocardial infarction.
+img_0433,abnormal_hb,abnormal_hb,this electrocardiogram shows an irregular heart rhythm.
+img_0455,abnormal_hb,abnormal_hb,ecg showing an abnormal heartbeat.
+img_0469,abnormal_hb,abnormal_hb,ecg showing an abnormal heartbeat.
+img_0471,abnormal_hb,abnormal_hb,this electrocardiogram shows an irregular heart rhythm.
+img_0475,abnormal_hb,history_mi,ecg showing evidence of prior myocardial infarction.
+img_0484,abnormal_hb,abnormal_hb,this electrocardiogram shows an irregular heart rhythm.
+img_0489,abnormal_hb,abnormal_hb,this electrocardiogram shows an irregular heart rhythm.
+img_0494,abnormal_hb,abnormal_hb,ecg showing an abnormal heartbeat.
+img_0504,abnormal_hb,history_mi,ecg showing evidence of prior myocardial infarction.
+img_0508,abnormal_hb,abnormal_hb,ecg showing an abnormal heartbeat.
+img_0513,abnormal_hb,history_mi,ecg showing evidence of prior myocardial infarction.
+img_0514,abnormal_hb,abnormal_hb,this electrocardiogram shows an irregular heart rhythm.
+img_0516,abnormal_hb,history_mi,ecg showing evidence of prior myocardial infarction.
+img_0530,abnormal_hb,history_mi,ecg showing evidence of prior myocardial infarction.
+img_0550,abnormal_hb,abnormal_hb,this electrocardiogram shows an irregular heart rhythm.
+img_0554,abnormal_hb,abnormal_hb,ecg showing an abnormal heartbeat.
+img_0555,abnormal_hb,abnormal_hb,ecg showing an abnormal heartbeat.
+img_0556,abnormal_hb,abnormal_hb,this electrocardiogram shows an irregular heart rhythm.
+img_0573,abnormal_hb,history_mi,ecg showing evidence of prior myocardial infarction.
+img_0574,abnormal_hb,abnormal_hb,ecg showing an abnormal heartbeat.
+img_0580,abnormal_hb,history_mi,ecg showing evidence of prior myocardial infarction.
+img_0594,abnormal_hb,abnormal_hb,ecg showing an abnormal heartbeat.
+img_0596,abnormal_hb,abnormal_hb,this electrocardiogram shows an irregular heart rhythm.
+img_0597,abnormal_hb,abnormal_hb,this electrocardiogram shows an irregular heart rhythm.
+img_0598,abnormal_hb,abnormal_hb,ecg showing an abnormal heartbeat.
+img_0604,abnormal_hb,abnormal_hb,this electrocardiogram shows an irregular heart rhythm.
+img_0609,abnormal_hb,abnormal_hb,this electrocardiogram shows an irregular heart rhythm.
+img_0618,abnormal_hb,history_mi,ecg showing evidence of prior myocardial infarction.
+img_0624,abnormal_hb,abnormal_hb,ecg showing an abnormal heartbeat.
+img_0625,abnormal_hb,abnormal_hb,this electrocardiogram shows an irregular heart rhythm.
+img_0627,abnormal_hb,history_mi,ecg showing evidence of prior myocardial infarction.
+img_0638,abnormal_hb,abnormal_hb,this electrocardiogram shows an irregular heart rhythm.
+img_0641,abnormal_hb,history_mi,ecg showing evidence of prior myocardial infarction.
+img_0642,abnormal_hb,abnormal_hb,ecg showing an abnormal heartbeat.
+img_0650,normal,normal,normal ecg with regular sinus rhythm.
+img_0651,normal,normal,normal ecg with regular sinus rhythm.
+img_0657,normal,normal,normal ecg with regular sinus rhythm.
+img_0658,normal,normal,normal ecg with regular sinus rhythm.
+img_0661,normal,normal,normal ecg with regular sinus rhythm.
+img_0667,normal,normal,normal ecg with regular sinus rhythm.
+img_0675,normal,normal,normal ecg with regular sinus rhythm.
+img_0684,normal,history_mi,ecg showing evidence of prior myocardial infarction.
+img_0700,normal,normal,normal ecg with regular sinus rhythm.
+img_0702,normal,normal,normal ecg with regular sinus rhythm.
+img_0714,normal,normal,normal ecg with regular sinus rhythm.
+img_0734,normal,normal,normal ecg with regular sinus rhythm.
+img_0741,normal,normal,normal ecg with regular sinus rhythm.
+img_0743,normal,normal,normal ecg with regular sinus rhythm.
+img_0749,normal,normal,normal ecg with regular sinus rhythm.
+img_0759,normal,normal,normal ecg with regular sinus rhythm.
+img_0761,normal,normal,normal ecg with regular sinus rhythm.
+img_0763,normal,normal,normal ecg with regular sinus rhythm.
+img_0764,normal,normal,normal ecg with regular sinus rhythm.
+img_0769,normal,normal,normal ecg with regular sinus rhythm.
+img_0787,normal,normal,normal ecg with regular sinus rhythm.

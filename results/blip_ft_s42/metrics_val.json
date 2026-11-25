@@ -1,0 +1,96 @@
+{
+  "n": 74,
+  "accuracy": 0.6216216216216216,
+  "macro_f1": 0.44157423036733384,
+  "recall_mi": 0.0,
+  "per_class": {
+    "normal": {
+      "precision": 0.6129032258064516,
+      "recall": 0.9047619047619048,
+      "f1": 0.7307692307692307,
+      "support": 21
+    },
+    "mi": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5
+    },
+    "abnormal_hb": {
+      "precision": 1.0,
+      "recall": 0.6571428571428571,
+      "f1": 0.7931034482758621,
+      "support": 35
+    },
+    "history_mi": {
+      "precision": 0.2,
+      "recall": 0.3076923076923077,
+      "f1": 0.24242424242424243,
+      "support": 13
+    }
+  },
+  "confusion_matrix": {
+    "rows_true": [
+      "normal",
+      "mi",
+      "abnormal_hb",
+      "history_mi"
+    ],
+    "cols_pred": [
+      "normal",
+      "mi",
+      "abnormal_hb",
+      "history_mi",
+      "conflict",
+      "unknown"
+    ],
+    "values": [
+      [
+        19,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        23,
+        12,
+        0,
+        0
+      ],
+      [
+        9,
+        0,
+        0,
+        4,
+        0,
+        0
+      ]
+    ]
+  },
+  "macro_f1_ci95": [
+    0.36633249641319937,
+    0.5121638843017945
+  ],
+  "text": {
+    "bleu4": 0.6484989361134654,
+    "rougeL": 0.7461018711018711,
+    "meteor": 0.7425233702401469,
+    "valid_rate": 1.0,
+    "conflict_rate": 0.0,
+    "unknown_rate": 0.0,
+    "hallucination_rate": 0.0
+  },
+  "source": "/content/drive/MyDrive/ecg-vlm-salidas/results/blip_ft_s42/pred_val.csv"
+}
